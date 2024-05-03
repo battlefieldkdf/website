@@ -42,6 +42,7 @@ const buildConfig: () => Promise<UserConfig> = async () => ({
     resolve: {
         alias: {
             '@battlefieldkdf': '/battlefieldkdf',
+            vue: 'vue/dist/vue.esm-bundler.js',
         },
         extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.css'],
     },
@@ -59,7 +60,7 @@ const buildConfig: () => Promise<UserConfig> = async () => ({
     build: {
         outDir: './build',
         manifest: true,
-        target: 'esnext',
+        sourcemap: true,
     },
 
     server: {

@@ -1,3 +1,11 @@
 {
     "files.eol": "\n",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "vs-code-prettier-eslint.prettierLast": false,
+    "eslint.format.enable": false,
+    "prettier.quoteProps": "consistent",
+    "prettier.requireConfig": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
 }
