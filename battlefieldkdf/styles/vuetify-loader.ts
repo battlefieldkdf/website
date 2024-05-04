@@ -1,5 +1,4 @@
 import type * as Vuetify from 'vuetify';
-import 'vuetify/styles';
 
 type VuetifyOptions = NonNullable<Parameters<typeof Vuetify.createVuetify>[0]>;
 
@@ -8,7 +7,7 @@ export const createVuetify = async (dryRun?: boolean) => {
 
     options.theme = await getVuetifyThemeOption();
     options.display = {
-        mobileBreakpoint: 'sm',
+        mobileBreakpoint: 'md',
     };
 
     if (!dryRun) {
@@ -38,7 +37,7 @@ const getVuetifyThemeOption = async () => ({
             colors: {
                 primary: '#3f51b5',
                 secondary: '#b0bec5',
-                accent: '#8c9eff',
+                accent: '#009300',
                 error: '#b71c1c',
             },
         },
