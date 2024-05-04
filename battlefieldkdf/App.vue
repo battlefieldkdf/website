@@ -1,13 +1,18 @@
 <script setup lang="ts">
-console.log('setup');
-
-const appReady = () => {
-    console.log('app ready');
-};
+import AppNavigation from '@battlefieldkdf/components/AppNavigation.vue';
 </script>
 
 <template>
-    <VApp @vue:mounted="appReady">nothing?</VApp>
+    <VApp>
+        <VLayout>
+            <AppNavigation />
+            <VMain scrollable>
+                <VContainer>
+                    <RouterView></RouterView>
+                </VContainer>
+            </VMain>
+        </VLayout>
+    </VApp>
 </template>
 
 <style lang="scss"></style>

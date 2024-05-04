@@ -3,13 +3,13 @@ import * as Vue from 'vue';
 import { createVuetify } from '@battlefieldkdf/styles/vuetify-loader';
 
 import App from '@battlefieldkdf/App.vue';
+import { createBkdfRouter } from './router';
 
 async function main() {
     const app = Vue.createApp(App);
-    const vuetify = await createVuetify();
 
-    app.use(vuetify);
-    // app.use(router);
+    app.use(await createVuetify());
+    app.use(createBkdfRouter());
 
     console.log('mounting app', app);
 

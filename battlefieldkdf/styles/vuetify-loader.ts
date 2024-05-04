@@ -1,4 +1,5 @@
 import type * as Vuetify from 'vuetify';
+import 'vuetify/styles';
 
 type VuetifyOptions = NonNullable<Parameters<typeof Vuetify.createVuetify>[0]>;
 
@@ -6,6 +7,9 @@ export const createVuetify = async (dryRun?: boolean) => {
     const options: VuetifyOptions = {};
 
     options.theme = await getVuetifyThemeOption();
+    options.display = {
+        mobileBreakpoint: 'sm',
+    };
 
     if (!dryRun) {
         options.components = await import('vuetify/components');
