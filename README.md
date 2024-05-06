@@ -1,5 +1,7 @@
 # Battlefield KdF Website
 
+> [![Build and Deploy Prod](https://github.com/battlefieldkdf/website/actions/workflows/main.yml/badge.svg)](https://github.com/battlefieldkdf/website/actions/workflows/main.yml)
+
 Live at: https://battlefieldkdf.org
 
 Hand-made with Vue and Vuetify.
