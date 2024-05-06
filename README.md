@@ -26,3 +26,8 @@ Then:
 
 VSCode is the recommended editor. Settings for setting it up are included.
 Other IDEs should be easy to set up too. This is not a complex project.
+
+## Deploy
+
+The website is hosted in AWS, using S3 for storage and Cloudfront as the "server".
+A Github actions configuration for deploying it is included.
