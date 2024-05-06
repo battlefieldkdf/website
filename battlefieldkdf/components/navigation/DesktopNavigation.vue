@@ -28,8 +28,15 @@ const version = __VERSION__;
 
         <VSpacer />
         <VCardActions class="justify-center opacity-60 mb-0">
-            &copy; {{ new Date().getFullYear() }}
-            <VBtn variant="text"> <VIcon> mdi-github </VIcon>{{ version }} ({{ commitRef }}) </VBtn>
+            <VBtn variant="text" class="text-caption">
+                <VIcon> mdi-github </VIcon>{{ version }} ({{ commitRef }}) &copy; {{ new Date().getFullYear() }}
+            </VBtn>
         </VCardActions>
     </VCard>
 </template>
+
+<style scoped lang="scss">
+* {
+    font-family: 'Roboto', sans-serif;
+}
+</style>

@@ -11,7 +11,7 @@ const lipsum = new LoremIpsum();
     <MainContentCard :image="CalendarJpg" alt="Calendar">
         <template #title> Battlefield KdF Calendar </template>
 
-        <p class="text-body-1 lead-letter">We like swords. {{ lipsum.generateSentences(10) }}</p>
+        <p class="lead-letter">We like swords. {{ lipsum.generateSentences(10) }}</p>
 
         <VSkeletonLoader type="table"></VSkeletonLoader>
     </MainContentCard>

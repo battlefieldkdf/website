@@ -9,12 +9,12 @@ const display = useDisplay();
 
 <template>
     <VApp>
-        <VLayout>
+        <VLayout class="app">
             <MobileNavigation v-if="display.mobile.value" />
             <VNavigationDrawer floating>
                 <DesktopNavigation v-if="!display.mobile.value" />
             </VNavigationDrawer>
-            <VMain>
+            <VMain scrollable>
                 <RouterView v-if="display.mobile.value" />
                 <VContainer v-else>
                     <VRow>
@@ -31,11 +31,18 @@ const display = useDisplay();
 </template>
 
 <style lang="scss">
-@import 'vuetify/styles';
+@import 'vuetify';
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html {
+    font-family: 'Playfair Display', serif, auto;
+    font-size: 14pt;
+}
 
 .lead-letter::first-letter {
     float: left;
-    font-size: 4em;
+    font-size: 3em;
     vertical-align: text-top;
     font-weight: bold;
 }

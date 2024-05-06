@@ -11,7 +11,7 @@ const lipsum = new LoremIpsum();
     <MainContentCard :image="ContactJpg" alt="Contact">
         <template #title> Contact Battlefield KdF </template>
 
-        <p class="text-body-1">
+        <p class="lead-letter">
             {{ lipsum.generateSentences(5) }}
         </p>
 

@@ -11,7 +11,7 @@ const lipsum = new LoremIpsum();
     <MainContentCard :image="AboutUsJpg" alt="About Us">
         <template #title> About Battlefield KdF </template>
 
-        <p class="text-body-1 lead-letter">We like swords. {{ lipsum.generateSentences(10) }}</p>
+        <p class="lead-letter">We like swords. {{ lipsum.generateSentences(10) }}</p>
 
         <VSheet class="ma-3">
             <VRow justify="space-between">

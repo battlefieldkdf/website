@@ -17,4 +17,4 @@ async function main() {
     document.getElementById('prevue')?.remove();
 }
 
-await main();
+main();

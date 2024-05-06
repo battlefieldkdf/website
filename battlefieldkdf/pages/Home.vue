@@ -11,7 +11,7 @@ const lipsum = new LoremIpsum();
     <MainContentCard :image="HomeSplashJpg" alt="Home">
         <template #title> Battlefield Kunst des Fechtens </template>
 
-        <p class="text-body-1 lead-letter">
+        <p class="lead-letter">
             Battlefield KdF is a HEMA club in Manassas, Virginia. {{ lipsum.generateSentences(10) }}
         </p>
     </MainContentCard>

@@ -5,12 +5,15 @@ const navItems = useNavigationItems().toReversed();
 </script>
 
 <template>
-    <VSpeedDial absolute location="top right" transition="slide-y-transition">
+    <VFab app extended :location="'top left' as any" :to="{ name: 'home' }">
+        <VIcon class="mr-1">mdi-home</VIcon>
+        <p>Battlefield KdF</p>
+    </VFab>
+    <VSpeedDial absolute location="top right" transition="slide-y-reverse-transition">
         <template #activator="{ props: activatorProps }">
             <VFab
                 app
                 :location="'bottom right' as any"
-                style="z-index: 1000"
                 v-bind="activatorProps"
                 size="x-large"
                 color="primary"
@@ -24,10 +27,18 @@ const navItems = useNavigationItems().toReversed();
             color="default"
             variant="elevated"
             size="large"
+            class="mt-3"
             rounded
+            stacked
         >
             <VIcon>{{ it.icon }}</VIcon>
             {{ it.text }}
         </VBtn>
     </VSpeedDial>
 </template>
+
+<style scoped lang="scss">
+* {
+    font-family: 'Roboto', sans-serif;
+}
+</style>
