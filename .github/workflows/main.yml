@@ -61,6 +61,10 @@ jobs:
         uses: reggionick/s3-deploy@v4
         with:
           folder: build
-          bucket: ${{ secrets.S3_BUCKET }}
           bucket-region: us-east-1
+          bucket: ${{ secrets.S3_BUCKET }}
+
+          delete-removed: true  # clean up files not in the distribution
+          private: true  # ACL is handled through cloudfront
+
           dist-id: ${{ secrets.CF_DIST_ID }}  # Cloudfront distribution to invalidate
