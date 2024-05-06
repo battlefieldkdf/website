@@ -8,9 +8,15 @@ permissions:
 
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
- 
-    # Nothing here yet
+    inputs:
+      build_type:
+        description: Build type
+        required: true
+        type: choice
+        options:
+          - prod
+          - dev
+        default: prod
 
 jobs:
   build:
@@ -32,7 +38,14 @@ jobs:
 
       - name: Build bundle
         run: |-
-          npm run build:prod
+          if [[ "prod" == "${{ inputs.build_type }}" ]]; then SCRIPT="build:prod"
+          elif [[ "dev" == "${{ inputs.build_type }}" ]]; then SCRIPT="build:prod"
+          else 
+            >&2 echo "unknown build type: ${{ inputs.build_type }}"
+            exit 1
+          fi
+
+          npm run "$SCRIPT"
 
       - name: Upload bundle
         id: upload-bundle
