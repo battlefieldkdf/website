@@ -70,15 +70,15 @@ jobs:
           role-to-assume: "arn:aws:iam::637423182435:role/bkdf_deploy_website"
 
       - name: Download bundle
+        id: download_bundle
         uses: actions/download-artifact@v4
         with:
           name: web-bundle
-          path: ${{ download-path }}
 
       - name: Deploy bundle
         uses: reggionick/s3-deploy@v4
         with:
-          folder: build
+          folder: ${{ steps.download_bundle.outputs.download-path }}
           bucket-region: us-east-1
           bucket: ${{ secrets.S3_BUCKET }}
 
