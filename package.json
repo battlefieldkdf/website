@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "npx vite build",
-    "build:prod": "npx vite build --mode prod",
-    "start": "npx vite",
-    "start:prod": "npx vite --mode prod"
+    "build": "npx vite build --mode development",
+    "build:prod": "npx vite build --mode production",
+    "start": "npx vite --mode development",
+    "start:prod": "npx vite --mode production"
   },
   "repository": {
     "type": "git",

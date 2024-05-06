@@ -11,8 +11,6 @@ async function main() {
     app.use(await createVuetify());
     app.use(createBkdfRouter());
 
-    console.log('mounting app', app);
-
     app.mount('#app-wrapper');
     document.getElementById('prevue')?.remove();
 }

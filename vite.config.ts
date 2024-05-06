@@ -60,7 +60,7 @@ const buildConfig: () => Promise<UserConfig> = async () => ({
     build: {
         outDir: './build',
         manifest: true,
-        sourcemap: true,
+        sourcemap: process.env.NODE_ENV !== 'production',
     },
 
     server: {
