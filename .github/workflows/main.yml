@@ -54,7 +54,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: web-bundle
-          path: ./build
           if-no-files-found: error
 
   s3-publish:
@@ -74,7 +73,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: web-bundle
-
+          path: ${{ download-path }}
 
       - name: Deploy bundle
         uses: reggionick/s3-deploy@v4
